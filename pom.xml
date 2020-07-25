@@ -12,6 +12,7 @@
         <module>OS</module>
         <module>Computer_Network</module>
         <module>JDK</module>
+        <module>Redis</module>
     </modules>
 
 
