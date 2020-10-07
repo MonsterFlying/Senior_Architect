@@ -13,6 +13,7 @@
         <module>Computer_Network</module>
         <module>JDK</module>
         <module>Redis</module>
+        <module>JVM</module>
     </modules>
 
 
