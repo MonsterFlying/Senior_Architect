@@ -10,4 +10,5 @@ gen
 .gitignore
 .idea/
 Senior_Architect.iml
+*.class
 
