@@ -26,9 +26,27 @@ public class VisibilityDemo01 {
     }
 }
 
+/**
+ * @description TODO
+ * @param: null
+ * @date: 2020/11/25 14:14
+ * @return:
+ * @author: xjl
+ */
+@SuppressWarnings("AlibabaCommentsMustBeJavadocFormat")
 class Mythread extends Thread {
-    //成员变量
+    /**
+     * 成员变量
+     */
     private boolean flag = false;
+
+    /**
+     * @description TODO
+     * @param:
+     * @date: 2020/11/25 14:14
+     * @return: void
+     * @author: xjl
+     */
 
     @Override
     public void run() {
@@ -42,6 +60,13 @@ class Mythread extends Thread {
         super.run();
     }
 
+    /**
+     * @description TODO
+     * @param:
+     * @date: 2020/11/25 14:15
+     * @return: boolean
+     * @author: xjl
+     */
     public boolean isFlag() {
         return flag;
     }

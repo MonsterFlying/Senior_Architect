@@ -14,7 +14,7 @@
  * 在多线程的下 要保证数据的安全性问题使用的vollate 不安全 还是需要使用的锁的机制
  */
 
-public class voilatedemo04 {
+public class VoilateDemo04 {
     public static void main(String[] args) {
         //创建一个线程对象
         Runnable taget = new ThreadTarget01();

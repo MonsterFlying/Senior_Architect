@@ -41,10 +41,26 @@ public class VisibilityDemo02 {
     }
 }
 
+/**
+ * @description TODO
+ * @param: null
+ * @date: 2020/11/25 14:15
+ * @return:
+ * @author: xjl
+ */
 class Mythread2 extends Thread {
-    //成员变量
+    /**
+     * 成员变量
+     */
     private volatile boolean flag = false;
 
+    /**
+     * @description TODO
+     * @param:
+     * @date: 2020/11/25 14:15
+     * @return: void
+     * @author: xjl
+     */
     @Override
     public void run() {
         try {
@@ -57,6 +73,13 @@ class Mythread2 extends Thread {
         super.run();
     }
 
+    /**
+     * @description TODO
+     * @param:
+     * @date: 2020/11/25 14:16
+     * @return: boolean
+     * @author: xjl
+     */
     public boolean isFlag() {
         return flag;
     }

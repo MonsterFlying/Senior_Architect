@@ -1,13 +1,11 @@
-import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * Copyright (C), 2018-2020
  * FileName: voilatedemo03
  * Author:   xjl
  * Date:     2020/10/8 15:48
  * Description: voilate的不保证原子操作
- * <p>
- * <p>
+ *
+ *
  * count++不是的原子的操作：
  * 1 从主存中读取的到工作内存中
  * 2 对工作内存的数据的进行++操作
@@ -16,10 +14,10 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 在多线程的下 要保证数据的安全性问题使用的vollate 不安全 还是需要使用的锁的机制
  */
 
-public class voilatedemo05 {
+public class VoilateDemo03 {
     public static void main(String[] args) {
         //创建一个线程对象
-        Runnable taget = new ThreadTarget02();
+        Runnable taget = new ThreadTarget();
 
         for (int i = 1; i <= 100; i++) {
             new Thread(taget, "第" + i + "线程").start();
@@ -27,13 +25,14 @@ public class voilatedemo05 {
     }
 }
 
-class ThreadTarget02 implements Runnable {
-    //定义一个原子类的操作
-    private AtomicInteger atomicInteger = new AtomicInteger();
+class ThreadTarget implements Runnable {
+    //定义一个共享变量
+    private volatile int count = 0;
 
     public void run() {
         for (int i = 1; i <= 10000; i++) {
-            System.out.println(Thread.currentThread().getName() + "count=>>>>>>>>>>" + atomicInteger.incrementAndGet());
+            count++;
+            System.out.println(Thread.currentThread().getName() + "count=>>>>>>>>>>" + count);
         }
     }
 }
