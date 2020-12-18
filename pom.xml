@@ -9,12 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>OS</module>
-        <module>Computer_Network</module>
-        <module>JDK</module>
-        <module>Redis</module>
-        <module>JVM</module>
-        <module>数据库</module>
     </modules>
 
 
